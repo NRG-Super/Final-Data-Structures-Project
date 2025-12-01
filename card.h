@@ -12,7 +12,7 @@ private:
     int value;
 
 public:
-    Card(const std::string& r = "?", char s = "?", int v = 0);
+    Card(const std::string& r = "?", char s = '?', int v = 0);
 
     int getValue() const;
     bool isAce() const;
