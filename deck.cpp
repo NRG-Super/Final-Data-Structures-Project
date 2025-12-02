@@ -22,6 +22,12 @@ void Deck::reset() {
     }
 }
 
+void Deck::shuffleDeck() {
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(cards.begin(), cards.end(), g);
+}
+
 Card Deck::dealCard() {
     if (cards.empty()) throw std::runtime_error("Deck empty!");
 
@@ -33,5 +39,4 @@ Card Deck::dealCard() {
 bool Deck::isEmpty() const {
     return cards.empty();
 }
-
 
