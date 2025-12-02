@@ -24,7 +24,7 @@ int Hand::getScore() const {
         total -=10;
         aceCount--;
     }
-    return;
+    return total;
 }
 
 void Hand::clear() {
