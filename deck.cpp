@@ -1,5 +1,3 @@
-//Deck.cpp
-
 #include "Deck.h"
 #include <algorithm>
 #include <random>
