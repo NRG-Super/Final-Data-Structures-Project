@@ -1,5 +1,3 @@
-//BlackjackGame.h
-
 #ifndef BLACKJACKGAME_H
 #define BLACKJACKGAME_H
 
