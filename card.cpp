@@ -1,5 +1,3 @@
-//Card.cpp
-
 #include "Card.h"
 
 Card::Card(const std::string& r, char s, int v) : rank(r), suit(s), value(v) {}
