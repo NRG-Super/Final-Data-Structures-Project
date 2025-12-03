@@ -1,11 +1,11 @@
-//BlackjackGame.cpp
-
 #include "BlackjackGame.h"
 #include <iostream>
 
 using namespace std;
 
 void BlackjackGame::playRound() {
+
+    // Prepare game
     deck.reset();
     deck.shuffleDeck();
 
