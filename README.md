@@ -1,4 +1,2 @@
 # Final-Data-Structures-Project
-This is the respository used for the final project in data structures.
-
-Test push
+This is the repository used for the final project in data structures.
