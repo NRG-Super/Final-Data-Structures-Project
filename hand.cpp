@@ -1,5 +1,3 @@
-//Hand.cpp
-
 #include "Hand.h"
 #include <iostream>
 #include <algorithm>
