@@ -1,5 +1,3 @@
-//Deck.h
-
 #ifndef DECK_H
 #define DECK_H
 
