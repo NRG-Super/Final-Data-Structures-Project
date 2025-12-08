@@ -1,14 +1,21 @@
 #ifndef HAND_H
 #define HAND_H
 
-#include <vector>
 #include "Card.h"
 
 class Hand {
 private:    
-    std::vector<Card> cards;
+    struct Node {
+        Card data;
+        Node* next;
+        Node (const Card& c) : data(c), next(nullptr) {}
+    };
+    Node* head;   //Start of the linked list
 
 public:
+    Hand();
+    ~Hand();
+
     void addCard(const Card& c);
     int getScore() const;
     void clear();
