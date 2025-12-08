@@ -4,8 +4,6 @@
 using namespace std;
 
 void BlackjackGame::playRound() {
-
-    // Prepare game
     deck.reset();
     deck.shuffleDeck();
 
@@ -30,12 +28,12 @@ void BlackjackGame::playRound() {
 
     while (true) {
         if (player.getScore() > 21) {
-            cout << "\nPlyaer Busts! Dealer Wins!\n";
+            cout << "\nPlayer Busts! Dealer Wins!\n";
             return;
         }
 
         char choice;
-        cout << "\nhit or Stand? (h/s): ";
+        cout << "\nHit or Stand? (h/s): ";
         cin >> choice;
 
         if (choice == 's' || choice == 'S') break;
@@ -52,6 +50,7 @@ void BlackjackGame::playRound() {
 
     cout << "\nDealer Reveals:\n";
     dealer.sortDescending();
+    
     cout << "Dealer Hand: ";
     dealer.showHand(true);
 
