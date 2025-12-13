@@ -63,7 +63,7 @@ void testDealerLogic() {
         dealer.addCard(d.dealCard());
     }
 
-    assert(dealer.getScore() >= 17 || dealer.getScore() > 21);
+    assert(dealer.getScore() >= 17);
 
     cout << "testDealerLogic passed\n";
 }
@@ -85,7 +85,6 @@ void testMultipleRounds() {
     cout << "testMultipleRounds passed\n";
 }
 
-//Runs all test cases
 void runAllTests() {
     cout << "\nRunning tests\n";
     testAddCard();
