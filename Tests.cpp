@@ -7,7 +7,6 @@
 
 using namespace std;
 
-//Test 1: Verify linked list insertion
 void testAddCard() {
     Hand h;
     Deck d;
@@ -24,7 +23,6 @@ void testAddCard() {
     cout << "testAddCard passed\n";
 }
 
-//Test 2: Verify Ace scoring logic
 void testAceScoring() {
     Hand h;
 
@@ -33,12 +31,11 @@ void testAceScoring() {
     h.addCard(Card("5", 'D', 5));
 
     int score = h.getScore();
-    assert(score == 15);         //The Ace should count as 1. (1 + 9 + 5) = 15
+    assert(score == 15);
 
     cout << "testAceScoring passed\n";
 }
 
-//Test 3: Verify sorting from highest to lowest
 void testSortingDescending() {
     Hand h;
 
@@ -47,14 +44,12 @@ void testSortingDescending() {
     h.addCard(Card("4", 'S', 4));
 
     h.sortDescending();
-
-    //The highest card should be 10
+    
     assert(h.getScore() == 17);
 
     cout << "testSortingDescending passed\n";
 }
 
-//Test 4: Verify dealer rule (must hit until >= 17)
 void testDealerLogic() {
     Hand dealer;
     Deck d;
@@ -73,11 +68,10 @@ void testDealerLogic() {
     cout << "testDealerLogic passed\n";
 }
 
-//Test 5: Verify stability across multiple rounds
 void testMultipleRounds() {
-    for (int i = 0; i < 5; i++) {         //This loop runs 5 rounds
+    for (int i = 0; i < 5; i++) {
 
-        Deck d;             //This creates a new deck each round
+        Deck d;
         d.shuffleDeck();
         Hand h;
 
