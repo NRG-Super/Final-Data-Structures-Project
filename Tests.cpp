@@ -21,7 +21,7 @@ void testAddCard() {
     int score = h.getScore();
     assert(score > 0 && score <= 21);
 
-    cout << "[PASS] testAddCard\n";
+    cout << "testAddCard passed\n";
 }
 
 //Test 2: Verify Ace scoring logic
@@ -35,7 +35,7 @@ void testAceScoring() {
     int score = h.getScore();
     assert(score == 15);         //The Ace should count as 1. (1 + 9 + 5) = 15
 
-    cout << "[PASS] testAceScoring\n";
+    cout << "testAceScoring passed\n";
 }
 
 //Test 3: Verify sorting from highest to lowest
@@ -51,7 +51,7 @@ void testSortingDescending() {
     //The highest card should be 10
     assert(h.getScore() == 17);
 
-    cout << "[PASS] testSortingDescending\n";
+    cout << "testSortingDescending passed\n";
 }
 
 //Test 4: Verify dealer rule (must hit until >= 17)
@@ -70,7 +70,7 @@ void testDealerLogic() {
 
     assert(dealer.getScore() >= 17 || dealer.getScore() > 21);
 
-    cout << "[PASS] testDealerLogic\n";
+    cout << "testDealerLogic passed\n";
 }
 
 //Test 5: Verify stability across multiple rounds
@@ -88,16 +88,21 @@ void testMultipleRounds() {
         assert(score > 0 && score <= 21);
     }
 
-    cout << "[PASS] testMultipleRounds\n";
+    cout << "testMultipleRounds passed\n";
 }
 
 //Runs all test cases
 void runAllTests() {
-    cout << "\n----- Running Blackjack Tests (cassert) -----\n";
+    cout << "\nRunning tests\n";
     testAddCard();
     testAceScoring();
     testSortingDescending();
     testDealerLogic();
     testMultipleRounds();
-    cout << "----- All Tests Passed -----\n";
+    cout << "All tests passed!\n\n";
+}
+
+int main() {
+    runAllTests();
+    return 0;
 }
