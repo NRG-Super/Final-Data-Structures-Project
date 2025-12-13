@@ -10,7 +10,7 @@ private:
         Node* next;
         Node (const Card& c) : data(c), next(nullptr) {}
     };
-    Node* head;   //Start of the linked list
+    Node* head;
 
 public:
     Hand();
